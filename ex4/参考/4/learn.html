@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket</title>
+    <style>
+
+    </style>
+</head>
+<body onload="WebSocketConnect()">
+<div>
+    <input id="btn2" type="button" onclick="send();" value="开灯">
+</div>
+<script>
+    function test() {
+        alert("我是行间事件");
+    }
+    // 打开一个 web socket
+    var ws = new WebSocket("ws://192.168.10.24:5678");
+    function WebSocketConnect()
+         {
+            if ("WebSocket" in window)
+            {
+               // 连接建立后的回调函数
+               ws.onopen = function()
+               {
+                  alert("已连接");
+               };
+               // 连接关闭后的回调函数
+               ws.onclose = function()
+               {
+                  // 关闭 websocket
+                  alert("连接已关闭...");
+               };
+            }
+            else
+            {
+               // 浏览器不支持 WebSocket
+               alert("您的浏览器不支持 WebSocket!");
+            }
+         }
+
+    function send() {
+        ws.send("light_on")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>web</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        text-align: center;
+      }
+      .switchOn {
+        display: inline-block;
+        width: 50px;
+        height: 22px;
+        border-radius: 22px;
+        background-color: #b5cea8;
+        position: relative;
+        vertical-align: top;
+        cursor: pointer;
+      }
+      .switchOn em {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #ffffff;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        transition: all 0.5s linear;
+      }
+      .switchOn:after {
+        content: "ON";
+        font-size: 12px;
+        position: absolute;
+        left: 6px;
+        top: 4px;
+        color: #ffffff;
+      }
+      .switchOn.switchOff {
+        background-color: #f8917a;
+      }
+      .switchOn.switchOff em {
+        left: 2px;
+      }
+      .switchOn.switchOff:after {
+        content: "";
+      }
+      .switchOn.switchOff:before {
+        content: "OFF";
+        font-size: 12px;
+        position: absolute;
+        right: 5px;
+        top: 4px;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script>
+    var socketConnected = false
+
+    $(document).ready(() => {
+      var socket = new WebSocket("ws://" + "172.20.10.8" + ":8080/ws");
+      socket.onopen = function () {
+        socketConnected = true
+      };
+      socket.onmessage = function (msg) {
+        console.log(msg.data);
+      };
+      socket.onclose = function () {
+        socketConnected = false
+      };
+      $("div[id^=switch]").on("click", function () {
+        let id = $(this).attr("id");
+        isOpen = $(this).hasClass("switchOff");
+        console.log(isOpen, $(this).attr("id"));
+        $(this).toggleClass("switchOff");
+        if (isOpen) {
+          if(socketConnected) {
+            socket.send("turn_on" + " " + id[id.length - 1]);
+          }
+          $("#range-" + id[id.length - 1]).val(255);
+        } else {
+          if(socketConnected) {
+            socket.send("turn_off" + " " + id[id.length - 1]);
+          }
+          $("#range-" + id[id.length - 1]).val(0);
+        }
+      });
+      $("input[type=range]").each((index, element) => {
+        $(element).change(function() {
+          id = $(this).attr("id");
+          if(socketConnected) {
+            socket.send("bright" + " " + id[id.length - 1] + " " + this.value);
+          }
+          if (this.value == 1) {
+            $("#switch-" + id[id.length - 1]).addClass("switchOff");
+          } else {
+            $("#switch-" + id[id.length - 1]).removeClass("switchOff");
+          }
+        });
+      });
+    });
+  </script>
+
+  <body>
+    <div>
+      <span>红色灯</span>
+      <div id="switch-1" class="switchOn switchOff">
+        <em></em>
+      </div>
+      <div><input id="range-1" type="range" value="0" min="1" max="255" /></div>
+    </div>
+
+    <div>
+      <span>蓝色灯</span>
+      <div id="switch-2" class="switchOn switchOff">
+        <em></em>
+      </div>
+      <div><input id="range-2" type="range" value="0" min="1" max="255" /></div>
+    </div>
+
+    <div>
+      <span>绿色灯</span>
+      <div id="switch-3" class="switchOn switchOff">
+        <em></em>
+      </div>
+      <div><input id="range-3" type="range" value="0" min="1" max="255" /></div>
+    </div>
+  </body>
+</html>

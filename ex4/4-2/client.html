@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小灯控制</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-wrapper {
+            margin-top: 16px;
+        }
+        .btn-wrapper button {
+            font-size: 24px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background: #f3f3f3;
+            transition: all 0.3s linear;
+            cursor: pointer;
+        }
+        .btn-wrapper button:hover {
+            background: #999999;
+        }
+    </style>
+</head>
+<body onload="WebSocketConnect()">
+<div class="main">
+    <div id = "bulb">
+        <img id = "bulb_pic" src="resources/lightbulb.png">
+    </div>
+    <div class="btn-wrapper">
+        <button id="btn1" type="button" onclick="lightControl('light_on');">开灯</button>
+        <button id="btn2" type="button" onclick="lightControl('light_off');">关灯</button>
+        <button id="btn3" type="button" onclick="lightControl('blink');">闪烁</button>
+    </div>
+</div>
+<script>
+    // 打开一个 web socket
+    var ws = new WebSocket("ws://172.20.10.8:5678");
+    function WebSocketConnect()
+         {
+            if ("WebSocket" in window)
+            {
+               // 连接建立后的回调函数
+               ws.onopen = function()
+               {
+                  alert("已连接");
+               };
+               // 连接关闭后的回调函数
+               ws.onclose = function()
+               {
+                  // 关闭 websocket
+                  alert("连接已关闭...");
+               };
+            }
+            else
+            {
+               // 浏览器不支持 WebSocket
+               alert("您的浏览器不支持 WebSocket!");
+            }
+         }
+    function lightControl(msg) {
+        ws.send(msg);
+    }
+    ws.addEventListener('message', function (event) {
+        var button = document.getElementById("bulb");
+        var picts = document.getElementById("bulb_pic");
+        if (event.data == "lightIsOn") {
+            picts.setAttribute("src","resources/lightbulb-fill.png");
+        }
+        if (event.data == "lightIsOff") {
+            picts.setAttribute("src","resources/lightbulb.png");
+        }
+    })
+</script>
+</body>
+</html>
