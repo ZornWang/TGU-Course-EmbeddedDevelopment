@@ -22,7 +22,6 @@ async def recv_msg(websocket):
         if recv_text == "blink":
             await r_light.blink(websocket)
 
-
 # 服务器端主逻辑
 async def main_logic(websocket, path):
     await recv_msg(websocket)
@@ -30,4 +29,3 @@ async def main_logic(websocket, path):
 start_server = websockets.serve(main_logic, '192.168.10.24', 5678)
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
-
