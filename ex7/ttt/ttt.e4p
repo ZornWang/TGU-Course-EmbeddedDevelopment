@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
-<!-- eric project file for project ex6 -->
-<!-- Saved: 2021-11-09, 10:40:29 -->
+<!-- eric project file for project ttt -->
+<!-- Saved: 2021-11-09, 02:48:13 -->
 <!-- Copyright (C) 2021 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
-  <Hash>2799fca16cc9480f0635e12c097d3417f0feb32e</Hash>
+  <Hash>e8f6db3010623c3e30e860acdc19bdbbbab93312</Hash>
   <ProgLanguage mixed="0">Python3</ProgLanguage>
   <ProjectType>PyQt5</ProjectType>
   <Version>0.1</Version>
@@ -13,12 +13,12 @@
   <Email></Email>
   <Eol index="0"/>
   <Sources>
-    <Source>Ui_ex6_form.py</Source>
+    <Source>Ui_ttt.py</Source>
     <Source>__init__.py</Source>
-    <Source>ex6_form.py</Source>
+    <Source>ttt.py</Source>
   </Sources>
   <Forms>
-    <Form>ex6_form.ui</Form>
+    <Form>ttt.ui</Form>
   </Forms>
   <Vcs>
     <VcsType>None</VcsType>

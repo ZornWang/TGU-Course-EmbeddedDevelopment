@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-6.0.dtd">
+<!-- eric6 tasks file for project ex6 -->
+<!-- Saved: 2021-11-09, 18:00:32 -->
+<Tasks version="6.0">
+  <ProjectScanFilter></ProjectScanFilter>
+  <Task priority="1" completed="False" type="1" uid="{157f708c-2d0e-4d5e-98b8-8ae7f93d2bcf}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-09, 17:55:55</Created>
+    <Resource>
+      <Filename>ex6_form.py</Filename>
+      <Linenumber>39</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{6a1b8674-b0e0-4147-8c96-ef644a1cdb37}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-09, 17:55:55</Created>
+    <Resource>
+      <Filename>ex6_form.py</Filename>
+      <Linenumber>53</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{f45e5ba4-2916-4bd7-90cd-dd15c623c714}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-09, 17:55:55</Created>
+    <Resource>
+      <Filename>ex6_form.py</Filename>
+      <Linenumber>62</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{136b8a31-b85a-4ed7-ad3d-f3ad29573419}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-09, 17:55:55</Created>
+    <Resource>
+      <Filename>ex6_form.py</Filename>
+      <Linenumber>71</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>

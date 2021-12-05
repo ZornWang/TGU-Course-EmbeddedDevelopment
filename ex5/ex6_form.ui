@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>205</width>
+    <height>215</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Blink">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>60</y>
+     <width>201</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Blink</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LightOn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>100</y>
+     <width>201</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LightOn</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LightOff">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>140</y>
+     <width>201</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LightOff</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="HelloWorld">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>180</y>
+     <width>99</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>HelloWorld</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Close">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>180</y>
+     <width>99</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Close</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>203</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>HelloWorld</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>printHelloWorld()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>40</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>26</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>LightOff</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>LightOff()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>85</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>LightOn</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>LightOn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>100</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Blink</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>Blink()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>printHelloWorld()</slot>
+  <slot>LightOff()</slot>
+  <slot>LightOn()</slot>
+  <slot>Blink()</slot>
+ </slots>
+</ui>

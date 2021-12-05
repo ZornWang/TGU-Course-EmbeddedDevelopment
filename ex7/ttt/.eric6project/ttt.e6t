@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-6.0.dtd">
+<!-- eric6 tasks file for project ttt -->
+<!-- Saved: 2021-11-16, 17:00:16 -->
+<Tasks version="6.0">
+  <ProjectScanFilter></ProjectScanFilter>
+  <Task priority="1" completed="False" type="2" uid="{442c9fe4-efb6-480c-832e-1a9dabb76aeb}">
+    <Summary>WARNING: Any manual changes made to this file will be lost when pyuic5 is</Summary>
+    <Description></Description>
+    <Created>2021-11-16, 16:54:01</Created>
+    <Resource>
+      <Filename>Ui_ttt.py</Filename>
+      <Linenumber>7</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{5d3ffce1-e7f5-468c-99df-35499d2c6bdb}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-16, 17:00:13</Created>
+    <Resource>
+      <Filename>ttt.py</Filename>
+      <Linenumber>55</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{f3888df2-85b4-416e-807e-853edc6dca6b}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-16, 17:00:13</Created>
+    <Resource>
+      <Filename>ttt.py</Filename>
+      <Linenumber>74</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{556338dc-161c-4d56-af88-49ad5495b114}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-16, 17:00:13</Created>
+    <Resource>
+      <Filename>ttt.py</Filename>
+      <Linenumber>87</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{c1506bc1-547c-47de-8ea4-9da5b0d76844}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2021-11-16, 17:00:13</Created>
+    <Resource>
+      <Filename>ttt.py</Filename>
+      <Linenumber>96</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>

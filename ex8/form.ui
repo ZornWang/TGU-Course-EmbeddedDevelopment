@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>494</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <widget class="QLabel" name="cam">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>320</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="shot">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>320</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Shot</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="turnToGary">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>330</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Turn to gary</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="color">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>380</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>330</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>380</y>
+     <width>151</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Center Color : </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="code">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>430</y>
+     <width>321</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>shot</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>shotPic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>165</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>turnToGary</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>turnGary()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>100</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>back</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>backToCam()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>291</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>shotPic()</slot>
+  <slot>turnGary()</slot>
+  <slot>backToCam()</slot>
+  <slot>getColor()</slot>
+ </slots>
+</ui>
